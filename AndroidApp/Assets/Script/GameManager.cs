@@ -54,7 +54,7 @@ public class GameManager : Singleton<GameManager>
         Hoverscript.Instance.Hoveractivation(Buttons.Getsprite());
     }
     // once we place the unit onto the map
-  public void BuyUnit()
+  public void PlaceUnit()
   {
        Clickedbutton = null;
        Hoverscript.Instance.Hoveractivation(null);
