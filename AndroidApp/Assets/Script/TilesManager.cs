@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.UIElements.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -45,9 +44,9 @@ public class TilesManager : MonoBehaviour
 
     private void Placement()
     {
-       GameObject tmp = Instantiate(GameManager.Instance.Clickedbutton.playerprefab, transform.position, Quaternion.identity);
-        tmp.GetComponent<SpriteRenderer>().sortingOrder = GridPosition.Y;
+      GameObject tmp = Instantiate(GameManager.Instance.Clickedbutton.unitprefab, transform.position, Quaternion.identity);
+        tmp.GetComponent<MeshRenderer>().sortingOrder = GridPosition.Y;
         tmp.transform.SetParent(transform);
-       GameManager.Instance.BuyUnit();
+       GameManager.Instance.PlaceUnit();
     }
 }
